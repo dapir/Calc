@@ -4,8 +4,14 @@ import model_calc as mod
 import view
 
 def button_click():
-    value_a = view.get_value()
-    value_b = view.get_value()
+    chos = int(input('Complex - (0) or not - (1) - '))
+    if chos == 0:
+        value_a = view.get_int()
+        value_b = view.get_int()
+    elif chos == 1:
+        value_a = view.get_complex()
+        value_b = view.get_complex()
+    
     mod.fun(value_a, value_b)
     que = input('Выберите действие (+,-,*,/): ')
     if que == '+':
